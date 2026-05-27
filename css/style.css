@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+/* colors Light */
+:root {
+    --color-white: #fff;
+    --color-black: #1a2029;
+    --color-gray: #14161d;
+    --color-light-gray: #f8f8f8;
+    --color-dark-gray: #31353f;
+    --color-light-purple: #8c77ed;
+    --color-blue: #3a6ff8;
+    --color-green: #1ecb4f;
+    --color-light-red: #f46d22;
+}
+
+/* colors Dark */
+:root[data-theme="dark"] {
+    --color-white: #fff;
+}
+
 body {
     font-family: Raleway;
 
