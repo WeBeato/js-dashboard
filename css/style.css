@@ -74,6 +74,14 @@ body {
     font-weight: 300;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 header {
     grid-area: header;
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
@@ -98,7 +106,38 @@ aside .logo {
     gap: 7px;
 }
 
-aside .logo span{
+aside .logo span {
     font-size: 21px;
     font-weight: 700;
+}
+
+.nav_sidbar {
+    margin-top: 2.7rem;
+}
+
+.nav_sidbar li {
+    margin-bottom: 32px;
+}
+
+.nav_sidbar li a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_sidbar li a span {
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.active_link_sidbar {
+    background-color: var(--color-blue);
+    border-radius: 10px;
+    padding: 12px;
+    height: 50px;
+}
+.active_link_sidbar *{
+    color: var(--color-white) !important;
+    fill: var(--color-white) !important;
 }
