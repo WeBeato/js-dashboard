@@ -85,6 +85,10 @@ li {
 header {
     grid-area: header;
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px;
 }
 
 aside {
@@ -168,4 +172,59 @@ aside .logo span {
     background-color: var(--color-white);
     padding: 10px 15px;
     border-radius: 4px;
+}
+
+.title_header h5 {
+    color: var(--color-black);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.search_box_header {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 0 20px;
+    width: 52%;
+    height: 44px;
+    position: relative;
+}
+
+.search_box_header input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search_box_header button {
+    position: absolute;
+    right: 20px;
+    top: 22%;
+    background-color: transparent;
+    border: 0;
+}
+
+header .user_action {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header .user_action .message_user button {
+    background-color: var(--color-white);
+    border: 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+header .user_info {
+    display: flex;
+    gap: 15px;
+}
+
+header .user_info .full_name_user{
+    display: flex;
+    align-items: center;
 }
