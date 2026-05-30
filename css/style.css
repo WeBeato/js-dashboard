@@ -19,9 +19,9 @@
 }
 
 /* colors Dark */
-:root[data-theme="dark"] {
-    --color-white: #fff;
-}
+/* :root[data-theme="dark"] .box_shadow{
+    background-color: var(--color-black);
+} */
 
 body {
     font-family: Raleway;
@@ -83,6 +83,10 @@ li {
     list-style-type: none;
 }
 
+.box_shadow {
+    background-color: var(--color-white);
+}
+
 header {
     grid-area: header;
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
@@ -105,6 +109,7 @@ aside {
 
 main {
     grid-area: main;
+    padding: 30px;
 }
 
 aside .logo {
@@ -183,7 +188,6 @@ aside .logo span {
 }
 
 .search_box_header {
-    background-color: var(--color-white);
     border-radius: 8px;
     padding: 0 20px;
     width: 52%;
@@ -214,8 +218,7 @@ header .user_action {
     gap: 2.5rem;
 }
 
-header .user_action .message_user button {
-    background-color: var(--color-white);
+.message_user button {
     border: 0;
     padding: 10px;
     border-radius: 8px;
@@ -255,10 +258,28 @@ header .user_info {
     display: block !important;
 }
 
-.bg_cover{
+.bg_cover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.25);
     position: fixed;
     display: none;
+}
+
+.header_letf_content_main span{
+    color: var(--color-black);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.header_letf_content_main div{
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin: 8px 0;
+}
+.header_letf_content_main div h6{
+    color: var(--color-gray);
+    font-size: 32px;
+    font-weight: 600;
 }

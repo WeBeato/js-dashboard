@@ -7,7 +7,7 @@
     aside,
     .title_header,
     header .search_box_header,
-    header.full_name_user {
+    header .full_name_user {
         display: none;
     }
 
