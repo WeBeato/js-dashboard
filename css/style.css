@@ -9,6 +9,7 @@
     --color-white: #fff;
     --color-black: #1a2029;
     --color-gray: #14161d;
+    --color_gray-300: #D1D5DB;
     --color-light-gray: #f8f8f8;
     --color-dark-gray: #31353f;
     --color-light-purple: #8c77ed;
@@ -89,6 +90,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 28px;
+    gap: 10px;
 }
 
 aside {
@@ -224,7 +226,27 @@ header .user_info {
     gap: 15px;
 }
 
-header .user_info .full_name_user{
+.full_name_user {
     display: flex;
     align-items: center;
+}
+
+.burger_menu {
+    border: 2px solid var(--color_gray-300);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.search_box_main {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.search_box_main form {
+    width: 90%;
+
 }
