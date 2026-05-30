@@ -250,3 +250,15 @@ header .user_info {
     width: 90%;
 
 }
+
+.d_block {
+    display: block !important;
+}
+
+.bg_cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    display: none;
+}

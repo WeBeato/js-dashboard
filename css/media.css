@@ -6,8 +6,23 @@
 
     aside,
     .title_header,
-    header .search_box_header {
+    header .search_box_header,
+    header.full_name_user {
         display: none;
+    }
+
+    header .user_action {
+        gap: 1.5rem;
+    }
+
+    header {
+        padding: 8px;
+    }
+
+    aside{
+        width: 68%;
+        z-index: 999;
+        background-color: var(--color-white);
     }
 }
 
