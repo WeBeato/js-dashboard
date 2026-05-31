@@ -16,6 +16,7 @@
     --color-blue: #3a6ff8;
     --color-green: #1ecb4f;
     --color-light-red: #f46d22;
+    --color_353E4D: #353E4D;
 }
 
 /* colors Dark */
@@ -266,20 +267,118 @@ header .user_info {
     display: none;
 }
 
-.header_letf_content_main span{
+.container_main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header_letf_content_main span {
     color: var(--color-black);
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.1rem;
 }
-.header_letf_content_main div{
+
+.header_letf_content_main div {
     display: flex;
     align-items: center;
     gap: 19px;
     margin: 8px 0;
 }
-.header_letf_content_main div h6{
+
+.header_letf_content_main div h6 {
     color: var(--color-gray);
     font-size: 32px;
     font-weight: 600;
+}
+
+.chart_bitcoin {
+    margin-top: 1.8rem;
+    padding: 32px 30px;
+    border-radius: 20px;
+}
+
+.row_chart_bitcoin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row_chart_bitcoin h5 {
+    color: var(--color-gray);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.filter_chart_bitcoin {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dropdown_filter {
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    height: 32px;
+}
+
+.dropdown_filter span {
+    color: var(--color-black);
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.modal_filter {
+    border: 1px solid var(--color-dark-gray);
+    padding: 7px;
+    border-radius: 5px;
+    height: 32px;
+}
+
+.row_bitcoin_btc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 27px;
+}
+
+.filter_btc>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.filter_btc>div h5 {
+    color: var(--color-black);
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.filter_btc>span {
+    color: var(--color-black);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.filter_btc_page button {
+    height: 22px;
+    padding: 0 15px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid var(--color-dark-gray);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color_353E4D);
+}
+
+.filter_btc_page button.active_btn {
+    background-color: var(--color-blue);
+    border: 0;
+    color: var(--color-black);
 }
