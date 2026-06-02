@@ -254,7 +254,7 @@ header .user_info {
 }
 
 .search_box_main form {
-    width: 90%;
+    width: 100%;
 
 }
 
@@ -554,7 +554,7 @@ header .user_info {
 
 .section_coins {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
     gap: 30px;
 }
 
