@@ -13,7 +13,7 @@ bg_cover.addEventListener('click', () => {
 })
 
 
-let dateSeries = [30, 40, 35, 50, 49, 60, 70, 91, 125, 12, 14, 15]
+let dateSeries = [130, 140, 135, 110, 100, 100, 90, 100, 125, 112, 114, 115]
 let dateCategories = [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
 
 
@@ -77,24 +77,40 @@ if (chartBitcoinBtc) {
     chart.render();
 }
 
-let btnOne = document.querySelector('#one_btn')
+let btn1h = document.querySelector('#oneH')
+let btn3h = document.querySelector('#threeH')
+let btn1d = document.querySelector('#oneD')
 
-btnOne?.addEventListener('click', function (e) {
+btn1h?.addEventListener('click', function (e) {
+    btn1h.classList.add('active_btn')
+    btn3h.classList.remove('active_btn')
+    btn1d.classList.remove('active_btn')
 
-    console.log('click')
+    chart.updateSeries([{
+        name: 'فروش',
+        data: dateSeries
+    }])
+})
+
+btn3h?.addEventListener('click', function (e) {
+    btn1h.classList.remove('active_btn')
+    btn3h.classList.add('active_btn')
+    btn1d.classList.remove('active_btn')
+
     chart.updateSeries([{
         name: 'فروش',
         data: [340, 460, 305, 500, 490, 600, 570, 591, 325, 212, 314, 415]
     }])
 })
 
-let btnSeconde = document.querySelector('#seconde_btn')
 
-btnSeconde?.addEventListener('click', function (e) {
+btn1d?.addEventListener('click', function (e) {
+    btn1h.classList.remove('active_btn')
+    btn3h.classList.remove('active_btn')
+    btn1d.classList.add('active_btn')
 
-    console.log('click')
     chart.updateSeries([{
-        name: 'test',
+        name: 'فروش',
         data: [415, 460, 235, 250, 249, 360, 370, 391, 225, 112, 114, 115]
     }])
 
