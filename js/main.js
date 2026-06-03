@@ -3,6 +3,8 @@ let sidebar = document.querySelector('aside');
 let bg_cover = document.querySelector('.bg_cover');
 let btn_notification = document.querySelector('#btn_notification')
 let list_notification = document.querySelector('#list_notification')
+let full_name_user = document.querySelector('.full_name_user')
+let list_account_user = document.querySelector('.list_account_user')
 
 burger_menu.addEventListener('click', () => {
     sidebar.classList.add('d_block')
@@ -123,6 +125,15 @@ btn_notification.addEventListener('click', (e) => {
         list_notification.classList.remove('active_notif')
     } else {
         list_notification.classList.add('active_notif')
+
+    }
+})
+
+full_name_user.addEventListener('click', () => {
+    if (list_account_user.classList.contains('activ_account')) {
+        list_account_user.classList.remove('activ_account')
+    } else {
+        list_account_user.classList.add('activ_account')
 
     }
 })
