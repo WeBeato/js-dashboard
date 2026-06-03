@@ -226,6 +226,7 @@ header .user_action {
     border: 0;
     padding: 10px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 header .user_info {
@@ -554,7 +555,7 @@ header .user_info {
 
 .section_coins {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 30px;
 }
 
@@ -662,4 +663,28 @@ header .user_info {
 
 .align_items_end {
     align-items: end;
+}
+
+.message_list_user {
+    width: 150px;
+    position: absolute;
+    z-index: 100;
+    top: 96px;
+    right: 185px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(218, 188, 255, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 250ms ease-in-out;
+}
+
+.message_list_user.active_notif {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+}
+
+.message_list_user li {
+    padding: 10px;
 }

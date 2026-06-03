@@ -1,6 +1,8 @@
 let burger_menu = document.querySelector('.burger_menu');
 let sidebar = document.querySelector('aside');
 let bg_cover = document.querySelector('.bg_cover');
+let btn_notification = document.querySelector('#btn_notification')
+let list_notification = document.querySelector('#list_notification')
 
 burger_menu.addEventListener('click', () => {
     sidebar.classList.add('d_block')
@@ -114,4 +116,13 @@ btn1d?.addEventListener('click', function (e) {
         data: [415, 460, 235, 250, 249, 360, 370, 391, 225, 112, 114, 115]
     }])
 
+})
+
+btn_notification.addEventListener('click', (e) => {
+    if (list_notification.classList.contains('active_notif')) {
+        list_notification.classList.remove('active_notif')
+    } else {
+        list_notification.classList.add('active_notif')
+
+    }
 })
