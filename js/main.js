@@ -5,6 +5,8 @@ let btn_notification = document.querySelector('#btn_notification')
 let list_notification = document.querySelector('#list_notification')
 let full_name_user = document.querySelector('.full_name_user')
 let list_account_user = document.querySelector('.list_account_user')
+let ligdthModeBtn = document.querySelector('#ligthModeBtn')
+let darkModeBtn = document.querySelector('#darkModeBtn')
 
 burger_menu.addEventListener('click', () => {
     sidebar.classList.add('d_block')
@@ -137,3 +139,17 @@ full_name_user.addEventListener('click', () => {
 
     }
 })
+
+const setThemeMode = (themeMode) => {
+    document.documentElement.setAttribute('data-theme', themeMode)
+
+    ligdthModeBtn.classList.toggle('active_darkmode', themeMode === 'light')
+    darkModeBtn.classList.toggle('active_darkmode', themeMode === 'dark')
+    localStorage.setItem('themeMode', themeMode)
+}
+
+ligdthModeBtn.addEventListener('click', () => setThemeMode('light'))
+darkModeBtn.addEventListener('click', () => setThemeMode('dark'))
+
+let saveThemeMode = localStorage.getItem('themeMode')
+setThemeMode(saveThemeMode || 'light')

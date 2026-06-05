@@ -21,12 +21,81 @@
     --color_F5B300: #F5B300;
     --color_1E2A41: #1E2A41;
     --color_B6BFC8: #B6BFC8;
+    --color_1B2028: #1B2028;
+    --color_9E9E9E: #9E9E9E;
+    --color_bg_gray: #14161D;
+    --color_bg_201F21: #201F21;
+    --color_text_E4E4E4: #E4E4E4;
 }
 
 /* colors Dark */
-/* :root[data-theme="dark"] .box_shadow{
-    background-color: var(--color-black);
-} */
+:root[data-theme="dark"] {
+    --color-gray: #fff;
+}
+
+:root[data-theme="dark"] .section_info_bitcoin,
+:root[data-theme="dark"] .buttons_operation {
+    background-color: var(--color_bg_gray);
+}
+
+:root[data-theme="dark"] .box_shadow,
+:root[data-theme="dark"] .active_btn_operation {
+    background-color: var(--color_1B2028);
+}
+
+:root[data-theme="dark"] .filter_buy_bitcoin {
+    background-color: var(--color_bg_201F21);
+}
+
+:root[data-theme="dark"] .filter_buy_bitcoin svg path,
+:root[data-theme="dark"] .filter_chart_bitcoin .dropdown_filter svg:last-child path,
+:root[data-theme="dark"] .burger_menu svg path {
+    fill: var(--color-white);
+}
+
+:root[data-theme="dark"] body {
+    background-color: var(--color_bg_gray);
+}
+
+:root[data-theme="dark"] aside {
+    background-color: var(--color_1B2028);
+}
+
+:root[data-theme="dark"] .nav_sidbar li a span,
+:root[data-theme="dark"] .header_letf_content_main span,
+:root[data-theme="dark"] .filter_btc_page button,
+:root[data-theme="dark"] .toggle_darkmode button span,
+:root[data-theme="dark"] .filter_chart_bitcoin .dropdown_filter span {
+    color: var(--color_9E9E9E);
+}
+
+:root[data-theme="dark"] .nav_sidbar li a svg path,
+:root[data-theme="dark"] .search_box_header button svg path,
+:root[data-theme="dark"] .message_user button svg path,
+:root[data-theme="dark"] .header_letf_content_main svg path,
+:root[data-theme="dark"] .toggle_darkmode button:first-child svg path,
+:root[data-theme="dark"] .filter_chart_bitcoin .modal_filter svg path {
+    fill: var(--color_9E9E9E);
+}
+
+:root[data-theme="dark"] aside .logo span,
+:root[data-theme="dark"] header .title_header h5,
+:root[data-theme="dark"] .full_name_user span,
+:root[data-theme="dark"] .header_letf_content_main div h6,
+:root[data-theme="dark"] .filter_btc>span {
+    color: var(--color-white);
+}
+
+:root[data-theme="dark"] .filter_btc>div h5,
+:root[data-theme="dark"] .filter_btc_page button.active_btn {
+    color: var(--color_text_E4E4E4);
+}
+
+:root[data-theme="dark"] .toggle_darkmode .active_darkmode {
+    background-color: var(--color_bg_gray);
+}
+
+
 
 body {
     font-family: Raleway;
@@ -488,7 +557,8 @@ header .user_info {
 
 .filter_buy_bitcoin span {
     font-size: 14px;
-    font-weight: 700
+    font-weight: 700;
+    color: var(--color-gray);
 }
 
 .filter_buy_bitcoin .icon_filter {
@@ -619,7 +689,7 @@ header .user_info {
 }
 
 .section_portfolio h5 {
-    color: var(--color_gray);
+    color: var(--color-gray);
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -704,7 +774,7 @@ header .user_info {
     transition: all 250ms ease-in-out;
 }
 
-.list_account_user.activ_account{
+.list_account_user.activ_account {
     opacity: 1;
     visibility: visible;
     pointer-events: visible;
