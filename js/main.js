@@ -48,7 +48,7 @@ var options = {
         },
         labels: {
             style: {
-                colors: '353E4D'
+                colors: '#353E4D'
             }
         }
 
@@ -146,6 +146,25 @@ const setThemeMode = (themeMode) => {
     ligdthModeBtn.classList.toggle('active_darkmode', themeMode === 'light')
     darkModeBtn.classList.toggle('active_darkmode', themeMode === 'dark')
     localStorage.setItem('themeMode', themeMode)
+
+    let labelsColor = themeMode === 'dark' ? '#9E9E9E' : '#353E4D'
+    chart.updateOptions({
+        xaxis: {
+            categories: dateCategories,
+            labels: {
+                style: {
+                    colors: labelsColor
+                }
+            }
+        },
+        yaxis: {
+            labels: {
+                style: {
+                    colors: labelsColor
+                }
+            }
+        },
+    })
 }
 
 ligdthModeBtn.addEventListener('click', () => setThemeMode('light'))
