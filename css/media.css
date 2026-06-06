@@ -38,6 +38,18 @@
     .message_list_user {
         right: 55px;
     }
+
+}
+
+@media (max-width:420px) {
+    .charts_card {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .graph_data {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
 }
 
 @media (min-width:1000px) {
