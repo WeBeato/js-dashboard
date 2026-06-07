@@ -15,6 +15,7 @@
     --color-light-purple: #8c77ed;
     --color-blue: #3a6ff8;
     --color-green: #1ecb4f;
+    --color_bg_green: #1ECB4F;
     --color_50AF95: #50AF95;
     --color-light-red: #f46d22;
     --color_353E4D: #353E4D;
@@ -28,6 +29,10 @@
     --color_text_E4E4E4: #E4E4E4;
     --color_F0F2F5: #F0F2F5;
     --color_4CAF50: #4CAF50;
+    --color_E2E8F0: #E2E8F0;
+    --color_64748B: #64748B;
+    --color_F7F9FC: #F7F9FC;
+    --color_259AE6: #259AE6;
 }
 
 /* colors Dark */
@@ -978,4 +983,89 @@ header .user_info {
     color: var(--color-gray);
     font-size: 14px;
     font-weight: 400;
+}
+
+.tables_container {
+    margin-top: 30px;
+}
+
+.table_content {
+    margin-bottom: 30px;
+    border: 1px solid var(--color_E2E8F0);
+    box-shadow: 0 8px 13px -3px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    padding-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.table_content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_content .table_products tbody tr:last-child td {
+    border: 0;
+}
+
+.table_content table thead tr th {
+    text-align: left;
+    padding: 22px;
+    border-bottom: 1px solid var(--color_E2E8F0);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color_9E9E9E);
+}
+
+.table_content table tbody tr td {
+    color: var(--color-gray);
+    padding: 22px;
+    border-bottom: 1px solid var(--color_E2E8F0);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.table_content table tbody tr td:first-child {
+    gap: 10px;
+}
+
+.table_content .table_products tbody tr td:last-child {
+    color: var(--color_bg_green);
+}
+
+.header_table_title {
+    padding: 12px 12px 20px 22px;
+    border-bottom: 1px solid var(--color_E2E8F0);
+}
+
+.header_table_title h6 {
+    color: var(--color-gray);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.img_tables {
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.table_content .table_media thead tr th {
+    background-color: var(--color_F7F9FC);
+}
+
+.table_content .table_media tbody tr td:nth-child(3) {
+    color: var(--color_bg_green);
+}
+
+.table_content .table_media tbody tr td:last-child {
+    color: var(--color_259AE6);
+    font-weight: 500;
+}
+
+.table_content .table_media {
+    width: 97%;
+    margin: 0 auto;
+}
+
+.border_0 {
+    border: 0 !important;
 }
