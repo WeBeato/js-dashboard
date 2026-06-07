@@ -172,3 +172,224 @@ darkModeBtn.addEventListener('click', () => setThemeMode('dark'))
 
 let saveThemeMode = localStorage.getItem('themeMode')
 setThemeMode(saveThemeMode || 'light')
+
+// Chart.js
+const ctx = document.getElementById('graph_1');
+const ctx2 = document.getElementById('graph_2');
+const ctx3 = document.getElementById('graph_3');
+
+if (ctx || ctx2 || ctx3) {
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S'],
+            datasets: [{
+                label: 'viwes',
+                data: [50, 20, 10, 20, 50, 40, 10],
+                borderWidth: 0,
+                borderRadius: 4,
+                maxBarThickness: 6,
+                backgroundColor: "#fff"
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255,255,255,0.8)',
+                        drawBorder: false,
+                        drawTicks: false,
+                        drawOnChartArea: true
+                    },
+                    border: {
+                        dash: [5, 5],
+                    },
+                    ticks: {
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 400,
+
+                        },
+                        color: 'rgba(255,255,255,0.8)'
+                    }
+                },
+                x: {
+                    grid: {
+                        color: 'rgba(255,255,255,0.8)',
+                        drawBorder: false,
+                        drawTicks: false,
+                        drawOnChartArea: true
+                    },
+                    border: {
+                        dash: [5, 5],
+                    },
+                    ticks: {
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 400,
+
+                        },
+                        color: 'rgba(255,255,255,0.8)'
+                    }
+                }
+            }
+        }
+    })
+
+
+    new Chart(ctx2, {
+
+        type: 'line',
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S'],
+            datasets: [{
+                label: 'Views',
+                data: [50, 20, 10, 20, 50, 40, 10],
+                borderWidth: 5,
+                pointRadius: 8,
+                borderColor: 'rgba(255,255,255,1)',
+                pointBackgroundColor: 'rgba(255,255,255,1)',
+                pointBorderColor: 'transparent',
+                fill: true,
+                maxBarThickness: 1,
+                backgroundColor: "transparent"
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255,255,255,0.8)',
+                        drawBorder: false,
+                        drawTicks: false,
+                        drawOnChartArea: true
+                    },
+                    border: {
+                        dash: [5, 5],
+                    },
+                    ticks: {
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 400,
+
+                        },
+                        color: 'rgba(255,255,255,0.8)'
+                    }
+                },
+                x: {
+                    grid: {
+                        color: 'rgba(255,255,255,0.8)',
+                        drawBorder: false,
+                        drawTicks: false,
+                        drawOnChartArea: true,
+                        display: false
+                    },
+                    border: {
+                        dash: [5, 5],
+                    },
+                    ticks: {
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 400,
+
+                        },
+                        color: 'rgba(255,255,255,0.8)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(ctx3, {
+
+        type: 'line',
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S'],
+            datasets: [{
+                label: 'Views',
+                data: [50, 20, 10, 20, 50, 40, 10],
+                borderWidth: 5,
+                pointRadius: 8,
+                borderColor: 'rgba(255,255,255,1)',
+                pointBackgroundColor: 'rgba(255,255,255,1)',
+                pointBorderColor: 'transparent',
+                fill: true,
+                maxBarThickness: 1,
+                backgroundColor: "transparent"
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255,255,255,0.8)',
+                        drawBorder: false,
+                        drawTicks: false,
+                        drawOnChartArea: true
+                    },
+                    border: {
+                        dash: [5, 5],
+                    },
+                    ticks: {
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 400,
+
+                        },
+                        color: 'rgba(255,255,255,0.8)'
+                    }
+                },
+                x: {
+                    grid: {
+                        color: 'rgba(255,255,255,0.8)',
+                        drawBorder: false,
+                        drawTicks: false,
+                        drawOnChartArea: true,
+                        display: false
+                    },
+                    border: {
+                        dash: [5, 5],
+                    },
+                    ticks: {
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 400,
+
+                        },
+                        color: 'rgba(255,255,255,0.8)'
+                    }
+                }
+            }
+        }
+    })
+}
