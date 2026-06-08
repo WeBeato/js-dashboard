@@ -33,6 +33,8 @@
     --color_64748B: #64748B;
     --color_F7F9FC: #F7F9FC;
     --color_259AE6: #259AE6;
+    --color_EFF4FB: #EFF4FB;
+    --color_F8FAFC: #F8FAFC;
 }
 
 /* colors Dark */
@@ -1068,4 +1070,131 @@ header .user_info {
 
 .border_0 {
     border: 0 !important;
+}
+
+
+.container_chat {
+    display: flex;
+    height: 100vh;
+    margin-top: 30px;
+    border: 1px solid var(--color_E2E8F0);
+    border-radius: 2px;
+}
+
+.sidbar_chat {
+    width: 30%;
+    border-right: 1px solid var(--color_E2E8F0);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidbar_chat_header {
+    padding: 35px 19px 8px;
+    border-bottom: 1px solid var(--color_E2E8F0);
+}
+
+.sidbar_chat_header h6 {
+    color: var(--color-gray);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.notfication_count_chat {
+    width: 29px;
+    height: 29px;
+    background-color: var(--color_EFF4FB);
+    border: 1px solid var(--color_E2E8F0);
+    border-radius: 6px;
+}
+
+.notfication_count_chat span {
+    color: var(--color-gray);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.conetnt_sidbar_chat {
+    padding: 25px 19px;
+}
+
+.sidbar_search_chat {
+    background-color: var(--color_EFF4FB);
+    border: 1px solid var(--color_E2E8F0);
+    border-radius: 6px;
+    height: 44px;
+    position: relative;
+}
+
+.sidbar_search_chat input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    padding-left: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sidbar_search_chat button {
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+    right: 11px;
+    top: 31%;
+}
+
+.users_chat {
+    margin-top: 2rem;
+}
+
+.user_info_chat {
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.user_info_chat.active_chat {
+    background-color: var(--color_EFF4FB);
+    border-radius: 6px;
+}
+
+.img_user_info_chat {
+    position: relative;
+}
+
+.is_online_user_chat {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 100%;
+    bottom: 7px;
+    right: -3px;
+    padding: 3px;
+}
+
+.is_online_user_chat span {
+    background-color: var(--color_4CAF50);
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+}
+
+.name_user_info_chat h5 {
+    color: var(--color-gray);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.name_user_info_chat p {
+    color: var(--color_9E9E9E);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.message_chat {
+    width: 70%;
 }
