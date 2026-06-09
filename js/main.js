@@ -399,7 +399,7 @@ function FilterUser() {
     let userInfoChat = document.querySelectorAll('.user_info_chat')
     let searchInput = inputSearchChat.value.trim().toLowerCase()
     Array.from(userInfoChat).forEach(user => {
-        let userName = user.querySelector('.name_user_info_chat h5').textContent.trim().toLowerCase()
+        let userName = user?.querySelector('.name_user_info_chat h5').textContent.trim().toLowerCase()
 
         if (userName.includes(searchInput)) {
             user.style.display = 'flex'
@@ -412,5 +412,13 @@ function FilterUser() {
 window.addEventListener('load', e => {
     let messageChatContent = document.querySelector('.message_chat_content')
 
-    messageChatContent.scrollTo(0, messageChatContent.scrollHeight)
+    messageChatContent?.scrollTo(0, messageChatContent.scrollHeight)
+})
+
+const dropdownSidbarMenu = document.querySelector('.dropdown_sidbar_menu')
+dropdownSidbarMenu.addEventListener('click', (e) => {
+    const arrowSubMenu = dropdownSidbarMenu.querySelector('.arrow_sub_menu')
+    const subMenuSidbar = dropdownSidbarMenu.querySelector('.sub_menu_sidbar')
+    subMenuSidbar.classList.toggle('show_sub_menu')
+    arrowSubMenu.classList.toggle('rotate_arrow_sub_menu')
 })

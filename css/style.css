@@ -72,6 +72,8 @@
 }
 
 :root[data-theme="dark"] .nav_sidbar li a span,
+:root[data-theme="dark"] .nav_sidbar li div span,
+:root[data-theme="dark"] .sub_menu_sidbar li a,
 :root[data-theme="dark"] .header_letf_content_main span,
 :root[data-theme="dark"] .filter_btc_page button,
 :root[data-theme="dark"] .toggle_darkmode button span,
@@ -80,6 +82,7 @@
 }
 
 :root[data-theme="dark"] .nav_sidbar li a svg path,
+:root[data-theme="dark"] .nav_sidbar li div svg path,
 :root[data-theme="dark"] .search_box_header button svg path,
 :root[data-theme="dark"] .message_user button svg path,
 :root[data-theme="dark"] .header_letf_content_main svg path,
@@ -217,16 +220,19 @@ aside .logo span {
 }
 
 .nav_sidbar li:nth-child(6) {
-    margin-bottom: 16rem;
+    margin-bottom: 6rem;
 }
 
-.nav_sidbar li a {
+.nav_sidbar li a,
+.nav_sidbar li div {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.nav_sidbar li a span {
+.nav_sidbar li a span,
+.nav_sidbar li div span,
+.sub_menu_sidbar li a {
     color: var(--color-black);
     font-size: 14px;
     font-weight: 600;
@@ -1320,4 +1326,40 @@ header .user_info {
     width: 52px;
     border: 0;
     border-radius: 6px;
+}
+
+.dropdown_sidbar_menu {
+    cursor: pointer;
+}
+
+.dropdown_sidbar_menu div,
+.dropdown_sidbar_menu div * {
+    pointer-events: none;
+}
+
+
+.arrow_sub_menu {
+    transition: all 250ms ease-in-out;
+}
+
+.rotate_arrow_sub_menu {
+    transform: rotateZ(180deg);
+}
+
+.sub_menu_sidbar {
+    padding-left: 3rem;
+    margin-top: 2rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 250ms ease-in-out;
+}
+
+.show_sub_menu {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
 }
