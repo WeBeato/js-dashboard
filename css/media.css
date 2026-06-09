@@ -39,6 +39,12 @@
         right: 55px;
     }
 
+    .sidbar_chat {
+        display: none;
+    }
+    .message_chat{
+        width: 100%;
+    }
 }
 
 @media (max-width:420px) {

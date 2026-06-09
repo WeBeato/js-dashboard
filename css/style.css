@@ -35,6 +35,7 @@
     --color_259AE6: #259AE6;
     --color_EFF4FB: #EFF4FB;
     --color_F8FAFC: #F8FAFC;
+    --color_3C50E0C: #3C50E0;
 }
 
 /* colors Dark */
@@ -1089,8 +1090,9 @@ header .user_info {
 }
 
 .sidbar_chat_header {
-    padding: 35px 19px 8px;
+    padding: 25px 19px 8px;
     border-bottom: 1px solid var(--color_E2E8F0);
+    height: 82px;
 }
 
 .sidbar_chat_header h6 {
@@ -1158,6 +1160,11 @@ header .user_info {
     border-radius: 6px;
 }
 
+:root[data-theme="dark"] .user_info_chat.active_chat,
+:root[data-theme="dark"] .notfication_count_chat {
+    background-color: var(--color_1E2A41);
+}
+
 .img_user_info_chat {
     position: relative;
 }
@@ -1197,4 +1204,120 @@ header .user_info {
 
 .message_chat {
     width: 70%;
+    position: relative;
+}
+
+.message_chat_header {
+    padding: 25px 19px 8px;
+    border-bottom: 1px solid var(--color_E2E8F0);
+    height: 82px;
+}
+
+.message_user_full_info {
+    gap: 12px;
+}
+
+.message_user_full_info div h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-gray);
+    margin-bottom: 3px;
+}
+
+.message_user_full_info div span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_9E9E9E);
+}
+
+.message_chat_content {
+    padding: 19px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.message_receive {}
+
+.message_receive div {
+    background-color: var(--color_EFF4FB);
+    width: 50%;
+    padding: 12px 20px;
+    border-radius: 0 16px 16px 16px;
+    margin: 12px 0;
+    color: var(--color-gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+:root[data-theme="dark"] .message_receive div {
+    color: var(--color-black);
+}
+
+.message_receive span,
+.message_sender span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_9E9E9E);
+}
+
+.message_sender {
+    direction: rtl;
+}
+
+.message_sender div {
+    background-color: var(--color_3C50E0C);
+    width: 50%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    color: var(--color-white);
+    border-radius: 16px 16px 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+.message_footer {
+    position: absolute;
+    bottom: 0;
+    border: 1px solid var(--color_E2E8F0);
+    padding: 12px 19px;
+    width: 100%;
+}
+
+.message_footer form {
+    gap: 12px;
+}
+
+.group_send_message {
+    width: 90%;
+    height: 52px;
+    background-color: var(--color_EFF4FB);
+    border: 1px solid var(--color_E2E8F0);
+    padding: 0 12px;
+    gap: 10px;
+}
+
+.group_send_message input {
+    border: 0;
+    background-color: transparent;
+    height: 100%;
+    width: 93%;
+    color: var(--color_9E9E9E);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.group_send_message button {
+    border: 0;
+    background-color: transparent;
+}
+
+.btn_send_message {
+    background-color: var(--color_3C50E0C);
+    height: 52px;
+    width: 52px;
+    border: 0;
+    border-radius: 6px;
 }
