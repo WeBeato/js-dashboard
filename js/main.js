@@ -1,22 +1,22 @@
-let burger_menu = document.querySelector('.burger_menu');
+let burgerMenu = document.querySelector('.burger_menu');
 let sidebar = document.querySelector('aside');
-let bg_cover = document.querySelector('.bg_cover');
-let btn_notification = document.querySelector('#btn_notification')
-let list_notification = document.querySelector('#list_notification')
-let full_name_user = document.querySelector('.full_name_user')
-let list_account_user = document.querySelector('.list_account_user')
+let bgCover = document.querySelector('.bg_cover');
+let btnNotification = document.querySelector('#btn_notification')
+let listNotification = document.querySelector('#list_notification')
+let fullNameUser = document.querySelector('.full_name_user')
+let listAccountUser = document.querySelector('.list_account_user')
 let ligdthModeBtn = document.querySelector('#ligthModeBtn')
 let darkModeBtn = document.querySelector('#darkModeBtn')
-let input_search_chat = document.querySelector('#input_search_chat')
+let inputSearchChat = document.querySelector('#input_search_chat')
 
-burger_menu.addEventListener('click', () => {
+burgerMenu.addEventListener('click', () => {
     sidebar.classList.add('d_block')
-    bg_cover.classList.add('d_block')
+    bgCover.classList.add('d_block')
 })
 
-bg_cover.addEventListener('click', () => {
+bgCover.addEventListener('click', () => {
     sidebar.classList.remove('d_block')
-    bg_cover.classList.remove('d_block')
+    bgCover.classList.remove('d_block')
 })
 
 
@@ -123,20 +123,20 @@ btn1d?.addEventListener('click', function (e) {
 
 })
 
-btn_notification.addEventListener('click', (e) => {
-    if (list_notification.classList.contains('active_notif')) {
-        list_notification.classList.remove('active_notif')
+btnNotification.addEventListener('click', (e) => {
+    if (listNotification.classList.contains('active_notif')) {
+        listNotification.classList.remove('active_notif')
     } else {
-        list_notification.classList.add('active_notif')
+        listNotification.classList.add('active_notif')
 
     }
 })
 
-full_name_user.addEventListener('click', () => {
-    if (list_account_user.classList.contains('activ_account')) {
-        list_account_user.classList.remove('activ_account')
+fullNameUser.addEventListener('click', () => {
+    if (listAccountUser.classList.contains('activ_account')) {
+        listAccountUser.classList.remove('activ_account')
     } else {
-        list_account_user.classList.add('activ_account')
+        listAccountUser.classList.add('activ_account')
 
     }
 })
@@ -248,7 +248,6 @@ if (ctx || ctx2 || ctx3) {
         }
     })
 
-
     new Chart(ctx2, {
 
         type: 'line',
@@ -321,6 +320,7 @@ if (ctx || ctx2 || ctx3) {
             }
         }
     })
+
     new Chart(ctx3, {
 
         type: 'line',
@@ -397,7 +397,7 @@ if (ctx || ctx2 || ctx3) {
 
 function FilterUser() {
     let userInfoChat = document.querySelectorAll('.user_info_chat')
-    let searchInput = input_search_chat.value.trim().toLowerCase()
+    let searchInput = inputSearchChat.value.trim().toLowerCase()
     Array.from(userInfoChat).forEach(user => {
         let userName = user.querySelector('.name_user_info_chat h5').textContent.trim().toLowerCase()
 
@@ -408,3 +408,9 @@ function FilterUser() {
         )
     })
 }
+
+window.addEventListener('load', e => {
+    let messageChatContent = document.querySelector('.message_chat_content')
+
+    messageChatContent.scrollTo(0, messageChatContent.scrollHeight)
+})

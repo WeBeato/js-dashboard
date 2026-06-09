@@ -1232,7 +1232,7 @@ header .user_info {
 
 .message_chat_content {
     padding: 19px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     overflow-y: auto;
 }
 
