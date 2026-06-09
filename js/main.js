@@ -7,6 +7,7 @@ let full_name_user = document.querySelector('.full_name_user')
 let list_account_user = document.querySelector('.list_account_user')
 let ligdthModeBtn = document.querySelector('#ligthModeBtn')
 let darkModeBtn = document.querySelector('#darkModeBtn')
+let input_search_chat = document.querySelector('#input_search_chat')
 
 burger_menu.addEventListener('click', () => {
     sidebar.classList.add('d_block')
@@ -391,5 +392,19 @@ if (ctx || ctx2 || ctx3) {
                 }
             }
         }
+    })
+}
+
+function FilterUser() {
+    let userInfoChat = document.querySelectorAll('.user_info_chat')
+    let searchInput = input_search_chat.value.trim().toLowerCase()
+    Array.from(userInfoChat).forEach(user => {
+        let userName = user.querySelector('.name_user_info_chat h5').textContent.trim().toLowerCase()
+
+        if (userName.includes(searchInput)) {
+            user.style.display = 'flex'
+        } else (
+            user.style.display = 'none'
+        )
     })
 }
