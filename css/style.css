@@ -36,6 +36,8 @@
     --color_EFF4FB: #EFF4FB;
     --color_F8FAFC: #F8FAFC;
     --color_3C50E0C: #3C50E0;
+    --color_344767: #344767;
+    --color_7B809A: #7B809A;
 }
 
 /* colors Dark */
@@ -1376,7 +1378,9 @@ header .user_info {
     width: 75%;
 }
 
-.wallet_cards_row {}
+.wallet_cards_row {
+    gap: 25px;
+}
 
 .wallet_cards_bank {
     width: 50%;
@@ -1386,7 +1390,6 @@ header .user_info {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 2rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -1428,6 +1431,55 @@ header .user_info {
     position: absolute;
     right: 21px;
     bottom: 14px;
+}
+
+.wallet_card_balance {
+    width: 25%;
+    height: 222px;
+    border-radius: 12px;
+    padding: 1rem 1rem 0;
+}
+
+.wallet_card_balance_icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(190deg, #E93B77, #DA1F63);
+    border-radius: 8px;
+}
+
+.wallet_card_balance_body {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.wallet_card_balance_body h5 {
+    color: var(--color_344767);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.wallet_card_balance_body span {
+    color: var(--color_7B809A);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.wallet_card_balance_footer {
+    width: 100%;
+    border-top: 1px solid var(--color_F0F2F5);
+    padding: 16px 0;
+    text-align: center;
+}
+
+.wallet_card_balance_footer span {
+    color: var(--color_344767);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.wallet_shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .wallet_invoices {
