@@ -1363,3 +1363,73 @@ header .user_info {
     visibility: visible;
     pointer-events: visible;
 }
+
+.container_wallet {
+    margin-top: 30px;
+}
+
+.first_row_wallet {
+    gap: 30px;
+}
+
+.wallet_cards {
+    width: 75%;
+}
+
+.wallet_cards_row {}
+
+.wallet_cards_bank {
+    width: 50%;
+    height: 222px;
+    border-radius: 12px;
+    background: url(../img/Mask\ Group.png), linear-gradient(170deg, #3e3d45 45%, #202020);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.wallet_cards_id {
+    margin: 2rem 0 3rem 0;
+    gap: 17px;
+}
+
+.wallet_cards_id span {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.wallet_cards_info {}
+
+.wallet_cards_header {
+    margin-bottom: 1rem;
+    gap: 3rem;
+}
+
+.wallet_cards_header span {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-white);
+}
+
+.wallet_cards_user {
+    gap: 17px;
+}
+
+.wallet_cards_user span {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.logo_card_wallet {
+    position: absolute;
+    right: 21px;
+    bottom: 14px;
+}
+
+.wallet_invoices {
+    width: 25px;
+}
