@@ -38,11 +38,13 @@
     --color_3C50E0C: #3C50E0;
     --color_344767: #344767;
     --color_7B809A: #7B809A;
+    --color_E91F63: #E91F63;
 }
 
 /* colors Dark */
 :root[data-theme="dark"] {
     --color-gray: #fff;
+    --color_344767: #fff;
 }
 
 :root[data-theme="dark"] .section_info_bitcoin,
@@ -89,7 +91,7 @@
 :root[data-theme="dark"] .message_user button svg path,
 :root[data-theme="dark"] .header_letf_content_main svg path,
 :root[data-theme="dark"] .toggle_darkmode button:first-child svg path,
-:root[data-theme="dark"] .filter_chart_bitcoin .modal_filter svg path {
+:root[data-theme="dark"] .filter_chart_bitcoin .modal_filter svg path{
     fill: var(--color_9E9E9E);
 }
 
@@ -109,6 +111,10 @@
 
 :root[data-theme="dark"] .toggle_darkmode .active_darkmode {
     background-color: var(--color_bg_gray);
+}
+:root[data-theme="dark"] .wallet_invoices div svg path,
+:root[data-theme="dark"] .payment_method_carditem button svg path{
+    fill: var(--color-white);
 }
 
 
@@ -1375,7 +1381,7 @@ header .user_info {
 }
 
 .wallet_cards {
-    width: 75%;
+    width: 70%;
 }
 
 .wallet_cards_row {
@@ -1534,7 +1540,139 @@ header .user_info {
 }
 
 .wallet_invoices {
-    width: 25px;
+    width: 30%;
+    border-radius: 12px;
+    padding: 25px 12px;
+}
+
+.wallet_invoices_header {}
+
+.wallet_invoices_header h6 {
+    color: var(--color_344767);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.wallet_invoices_header a {
+    height: 33px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color_E91F63);
+    border: 1px solid var(--color_E91F63);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 76px;
+}
+
+.wallet_invoices_content {
+    margin-top: 1rem;
+}
+
+.wallet_invoices_item {
+    margin-bottom: 1.5rem;
+}
+
+.wallet_invoices_date h6 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color_344767);
+    margin-bottom: 5px;
+}
+
+.wallet_invoices_date span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color_7B809A);
+}
+
+.wallet_invoices_price span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color_7B809A);
+}
+
+.wallet_invoices_price div {
+    gap: 2px;
+}
+
+.wallet_invoices_price div span {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color_344767);
+}
+
+.seconde_row_wallet {}
+
+.wallet_billing {}
+
+.wallet_billing_header {}
+
+.list_wallet_billing {}
+
+.wallet_billing_item {}
+
+.wallet_billing_item_header {}
+
+.wallet_billing_item_body {}
+
+.wallet_billing_item {}
+
+.wallet_transaction {}
+
+.wallet_transaction_content {}
+
+.group_transaction_item {}
+
+.transaction_item_right {}
+
+.group_transaction {}
+
+.transaction_item_left {}
+
+.dark_white {}
+
+.bg_transparent {
+    background-color: transparent;
+}
+
+.fs_12 {
+    font-size: 12px;
+}
+
+.fs_14 {
+    font-size: 14px;
+}
+
+.fs_16 {
+    font-size: 16px;
+}
+
+.fw_400 {
+    font-weight: 400;
+}
+
+.fw_700 {
+    font-weight: 700;
+}
+
+.mt_1 {
+    margin-top: 1rem;
+}
+
+.mt_2 {
+    margin-top: 2rem;
+}
+
+.mb_0_5 {
+    margin-bottom: 0.5rem;
+}
+
+.mb_1_5 {
+    margin-bottom: 1.5rem;
+}
+
+.gap_6 {
+    gap: 6px;
 }
 
 .gap_12 {

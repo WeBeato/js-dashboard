@@ -43,7 +43,27 @@
         display: none;
     }
 
-    .message_chat {
+    .first_row_wallet {
+        flex-wrap: wrap;
+    }
+
+    .message_chat,
+    .wallet_cards,
+    .wallet_invoices {
+        width: 100%;
+    }
+}
+
+@media (max-width:566px) {
+
+    .wallet_cards_row,
+    .payment_method_cards {
+        flex-wrap: wrap;
+    }
+
+    .wallet_card_balance,
+    .wallet_cards_bank,
+    .payment_method_carditem {
         width: 100%;
     }
 }
